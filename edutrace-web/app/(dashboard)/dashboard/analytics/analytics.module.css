@@ -1,0 +1,10 @@
+.page { display: flex; flex-direction: column; gap: 20px; }
+.kpiRow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.chartsRow { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.chartCard { padding: 22px; }
+.chartHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.chartTitle { font-weight: 700; font-size: 0.95rem; }
+.legend { display: flex; gap: 20px; margin-top: 10px; }
+.legendItem { font-size: 0.78rem; }
+.reportCard { padding: 22px; }
+@media (max-width: 900px) { .chartsRow { grid-template-columns: 1fr; } .kpiRow { grid-template-columns: repeat(2, 1fr); } }

@@ -1,0 +1,68 @@
+.formBox {}
+.errorBox {
+  background: var(--danger-bg);
+  border: 1px solid rgba(239,68,68,0.3);
+  color: var(--danger);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+.subtitle { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 28px; line-height: 1.5; }
+.form { display: flex; flex-direction: column; gap: 16px; margin-bottom: 16px; }
+
+.inputWrap { position: relative; }
+.inputIcon { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none; }
+.withIcon { padding-left: 38px !important; }
+.labelRow { display: flex; align-items: center; justify-content: space-between; }
+.forgotLink { font-size: 0.8rem; color: var(--primary-light); text-decoration: none; }
+.forgotLink:hover { text-decoration: underline; }
+.submitBtn { width: 100%; justify-content: center; }
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.ssoBtn { width: 100%; justify-content: center; margin-bottom: 16px; font-size: 0.875rem; }
+
+.switchText { text-align: center; font-size: 0.85rem; color: var(--text-muted); }
+.switchLink { color: var(--primary-light); text-decoration: none; font-weight: 600; }
+.switchLink:hover { text-decoration: underline; }
+
+/* Step indicator */
+.stepIndicator { display: flex; gap: 8px; margin-bottom: 20px; }
+.stepDot { height: 4px; flex: 1; background: var(--border); border-radius: 2px; transition: background var(--transition); }
+.stepActive { background: var(--primary); }
+.stepActions { display: flex; gap: 10px; margin-top: 8px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.finalStep {}
+.planChoice { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+.planOption { display: flex; align-items: center; gap: 12px; padding: 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); cursor: pointer; }
+.planOption:has(input:checked) { border-color: var(--primary); background: rgba(99,102,241,0.08); }
+.planLabel {}
+.planName { font-weight: 600; font-size: 0.9rem; }
+.planPrice { font-size: 0.8rem; color: var(--text-muted); }
+.trialNote { font-size: 0.8rem; color: var(--success); }
+
+/* Sent box */
+.sentBox { text-align: center; padding: 20px 0; }
+.sentIcon { font-size: 3rem; margin-bottom: 12px; }
+.sentBox p { color: var(--text-muted); font-size: 0.875rem; }
+.resendBtn { background: none; border: none; color: var(--primary-light); cursor: pointer; font-size: 0.875rem; text-decoration: underline; }

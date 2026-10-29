@@ -1,0 +1,30 @@
+.page { display: flex; flex-direction: column; gap: 20px; }
+.hero { text-align: center; padding: 32px; background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(139,92,246,0.04)); border: 1px solid rgba(99,102,241,0.15); border-radius: var(--radius-xl); }
+.hero h2 { font-size: 1.6rem; font-weight: 700; margin: 10px 0 6px; }
+.hero p { color: var(--text-muted); margin-bottom: 20px; }
+.searchBox { display: flex; gap: 10px; max-width: 440px; margin: 0 auto; }
+.search { flex: 1; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 10px 14px; color: var(--text-primary); font-size: 0.875rem; outline: none; }
+.search::placeholder { color: var(--text-muted); }
+.search:focus { border-color: var(--primary); }
+
+.guides {}
+.sectionTitle { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.95rem; margin-bottom: 14px; color: var(--text-secondary); }
+.guidesGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.guideCard { padding: 16px; display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.guideCard:hover { transform: translateX(4px); }
+.guideIcon { width: 36px; height: 36px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.guideTitle { flex: 1; font-size: 0.875rem; font-weight: 500; color: var(--text-primary); }
+
+.faqCard { padding: 24px; }
+.faqList { display: flex; flex-direction: column; gap: 16px; margin-top: 14px; }
+.faqItem { padding: 16px; background: var(--bg-secondary); border-radius: var(--radius-md); }
+.faqQ { font-weight: 600; font-size: 0.9rem; color: var(--text-primary); margin-bottom: 6px; }
+.faqA { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+
+.support { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.supportCard { padding: 22px; text-align: center; }
+.supportTitle { font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
+.supportCard p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.5; }
+
+@media (max-width: 900px) { .guidesGrid { grid-template-columns: repeat(2, 1fr); } .support { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .guidesGrid { grid-template-columns: 1fr; } }

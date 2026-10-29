@@ -1,0 +1,54 @@
+.page { display: flex; flex-direction: column; gap: 20px; }
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border: 1px solid rgba(99,102,241,0.2);
+  border-radius: var(--radius-lg);
+}
+.headerIcon { width: 48px; height: 48px; background: rgba(99,102,241,0.1); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.headerTitle { font-weight: 700; font-size: 1rem; }
+.headerSub { font-size: 0.82rem; color: var(--text-muted); }
+.header > button { margin-left: auto; flex-shrink: 0; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.spin { animation: spin 1s linear infinite; }
+.emptyState { padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+
+.suggestions { display: flex; flex-direction: column; gap: 14px; }
+.suggCard { padding: 22px; }
+.suggTop { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px; }
+.suggIcon { width: 42px; height: 42px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.suggInfo { flex: 1; }
+.suggTitle { font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.suggWhy { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+
+.actions { padding: 14px; background: var(--bg-secondary); border-radius: var(--radius-md); }
+.actionsLabel { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 8px; }
+.actionItem { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--text-secondary); padding: 4px 0; }
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border: 1px solid rgba(99,102,241,0.2);
+  border-radius: var(--radius-lg);
+}
+.headerIcon { width: 48px; height: 48px; background: rgba(99,102,241,0.1); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.headerTitle { font-weight: 700; font-size: 1rem; }
+.headerSub { font-size: 0.82rem; color: var(--text-muted); }
+.header > button { margin-left: auto; flex-shrink: 0; }
+
+.suggestions { display: flex; flex-direction: column; gap: 14px; }
+.suggCard { padding: 22px; }
+.suggTop { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px; }
+.suggIcon { width: 42px; height: 42px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.suggInfo { flex: 1; }
+.suggTitle { font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.suggWhy { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+
+.actions { padding: 14px; background: var(--bg-secondary); border-radius: var(--radius-md); }
+.actionsLabel { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 8px; }
+.actionItem { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--text-secondary); padding: 4px 0; }

@@ -1,0 +1,135 @@
+.topbar {
+  position: fixed;
+  left: var(--sidebar-width);
+  right: 0;
+  top: 0;
+  height: var(--topbar-height);
+  background: rgba(7, 11, 24, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 40;
+  transition: left var(--transition-slow);
+}
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.backLink:hover {
+  color: var(--primary-light);
+  border-color: var(--primary);
+  background: rgba(99,102,241,0.08);
+}
+.divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+.searchInput {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 8px 14px 8px 36px;
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  outline: none;
+  width: 220px;
+  transition: all var(--transition);
+}
+.searchInput::placeholder { color: var(--text-muted); }
+.searchInput:focus { border-color: var(--primary); background: var(--bg-card-hover); width: 280px; }
+
+.iconBtn {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+.iconBtn:hover { background: var(--bg-card-hover); color: var(--text-primary); }
+.dot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 7px;
+  height: 7px;
+  background: var(--danger);
+  border-radius: 50%;
+  border: 2px solid var(--bg-primary);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px 6px 6px;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+.profile:hover { background: var(--bg-card-hover); border-color: var(--border-light); }
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--grad-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.profileInfo { display: flex; flex-direction: column; line-height: 1.2; }
+.profileName { font-size: 0.82rem; font-weight: 600; color: var(--text-primary); }
+.profileRole { font-size: 0.7rem; color: var(--text-muted); }
+.chevron { color: var(--text-muted); }

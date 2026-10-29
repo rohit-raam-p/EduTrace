@@ -1,0 +1,143 @@
+.page {}
+
+/* HERO */
+.hero {
+  position: relative;
+  padding: 80px 0 60px;
+  overflow: hidden;
+}
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(99,102,241,0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 80% 60%, rgba(245,158,11,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: center;
+}
+.heroContent { position: relative; z-index: 1; }
+.heroBadge { margin-bottom: 24px; }
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+.heroDesc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+.heroCta { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 28px; }
+.heroChecks { display: flex; flex-wrap: wrap; gap: 16px; }
+.heroCheck { display: flex; align-items: center; gap: 6px; font-size: 0.82rem; color: var(--text-muted); }
+
+/* Score Card */
+.heroCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  position: relative;
+  box-shadow: var(--shadow-primary);
+  animation: float 5s ease-in-out infinite;
+}
+.cardHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.cardTitle { font-family: var(--font-heading); font-weight: 600; font-size: 0.95rem; }
+
+.scoreCircle { position: relative; width: 160px; height: 160px; margin: 0 auto 20px; }
+.donut { width: 100%; height: 100%; }
+.scoreCenter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.scoreNum {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+.scoreUnit { font-size: 0.8rem; color: var(--text-muted); }
+
+.scoreParams { display: flex; flex-direction: column; gap: 10px; }
+.scoreParam {}
+.paramRow { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 0.8rem; color: var(--text-secondary); }
+.paramVal { font-weight: 600; color: var(--primary-light); }
+
+/* STATS */
+.statsSection { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--bg-secondary); }
+.statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.statItem { text-align: center; }
+
+/* FEATURES */
+.sectionHeader { text-align: center; margin-bottom: 48px; }
+.sectionTitle { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; margin: 12px 0 14px; }
+.sectionDesc { font-size: 1rem; color: var(--text-muted); max-width: 520px; margin: 0 auto; }
+
+.featuresGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.featureCard { padding: 28px; }
+.featureIcon { width: 50px; height: 50px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.featureTitle { font-family: var(--font-heading); font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+.featureDesc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
+
+/* HOW IT WORKS */
+.howSection { background: var(--bg-secondary); }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.step { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+.stepNum { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--primary); opacity: 0.5; margin-bottom: 14px; }
+.stepTitle { font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.stepDesc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+
+/* CTA */
+.ctaSection {}
+.ctaBox {
+  text-align: center;
+  padding: 60px 40px;
+  background: var(--grad-card);
+  border: 1px solid rgba(99,102,241,0.2);
+  border-radius: var(--radius-xl);
+  position: relative;
+  overflow: hidden;
+}
+.ctaBox::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: 50%;
+  transform: translateX(-50%);
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(99,102,241,0.15), transparent 70%);
+  pointer-events: none;
+}
+.ctaTitle { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; margin-bottom: 14px; }
+.ctaDesc { font-size: 1rem; color: var(--text-muted); max-width: 440px; margin: 0 auto 32px; }
+.ctaActions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 1024px) {
+  .hero .container { grid-template-columns: 1fr; }
+  .heroCard { max-width: 400px; }
+  .featuresGrid { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .featuresGrid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+}

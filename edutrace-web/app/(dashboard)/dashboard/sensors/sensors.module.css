@@ -1,0 +1,16 @@
+.page { display: flex; flex-direction: column; gap: 20px; }
+.topBar { display: flex; align-items: center; justify-content: space-between; }
+.summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.sensorsGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.sensorCard { padding: 20px; }
+.offline { opacity: 0.6; }
+.sensorHeader { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+.sensorIconWrap { width: 38px; height: 38px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.sensorInfo { flex: 1; }
+.sensorName { font-size: 0.85rem; font-weight: 600; color: var(--text-primary); line-height: 1.3; }
+.sensorLocation { font-size: 0.72rem; color: var(--text-muted); }
+.sensorValue { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700; margin-bottom: 10px; }
+.offlineMsg { text-align: center; padding: 20px; font-size: 0.8rem; color: var(--text-muted); }
+.warningNote { display: flex; align-items: center; gap: 5px; margin-top: 8px; font-size: 0.75rem; color: var(--warning); }
+@media (max-width: 900px) { .sensorsGrid { grid-template-columns: repeat(2, 1fr); } .summary { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .sensorsGrid { grid-template-columns: 1fr; } }

@@ -1,0 +1,15 @@
+.page { display: flex; flex-direction: column; gap: 20px; }
+.topRow { display: grid; grid-template-columns: 220px 1fr 1fr; gap: 20px; }
+.overallCard { padding: 24px; text-align: center; }
+.overallIcon { width: 56px; height: 56px; background: rgba(99,102,241,0.1); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+.overallScore { font-family: var(--font-heading); font-size: 3.5rem; font-weight: 800; background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
+.overallScore span { font-size: 1.5rem; }
+.overallLabel { font-size: 0.85rem; color: var(--text-muted); margin: 6px 0; }
+.overallChange { font-size: 0.8rem; color: var(--success); display: flex; align-items: center; justify-content: center; gap: 5px; margin-bottom: 16px; }
+.overallMeta { display: flex; justify-content: space-around; }
+.metaVal { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; color: var(--primary-light); }
+.metaLab { font-size: 0.72rem; color: var(--text-muted); }
+.radarCard, .historyCard { padding: 20px; }
+.cardTitle { font-weight: 700; margin-bottom: 14px; font-size: 0.95rem; }
+.paramsTable { padding: 22px; }
+@media (max-width: 1100px) { .topRow { grid-template-columns: 1fr 1fr; } .overallCard { grid-column: span 2; } }
